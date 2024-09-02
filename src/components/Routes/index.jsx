@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../../App";
-import Register from "../pages/Register";
 import CheckPassword from "../pages/CheckPassword";
 import Home from "../pages/Home";
 import MessagePage from "../Elements/MessagePage";
@@ -10,6 +9,7 @@ import MainPage from '../Pages/MainPage'
 import ForgotPassword from "../Pages/Forgot-password";
 import ResetPassword from "../Pages/Reset-password";
 import Sidebar from "../Elements/Sidebar";
+import Register from "../Pages/Register"
 
 const router = createBrowserRouter([
   {
