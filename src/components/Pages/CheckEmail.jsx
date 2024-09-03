@@ -42,7 +42,6 @@ function Checkemail() {
                 setData({
                   email : "",
                 })
-                console.log("Attempting to show toast");
                 navigate('/checkpassword',{
                   state : response?.data?.data
                 })
