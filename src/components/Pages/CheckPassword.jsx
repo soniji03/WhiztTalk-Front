@@ -58,7 +58,8 @@ function CheckPassword() {
           userId: location?.state?._id,
           password: data.password
         },
-        withCredentials: true
+        withCredentials: true,
+      
       })
 
       toast.success(response.data.message)
@@ -75,6 +76,7 @@ function CheckPassword() {
         })
         navigate('/')
       }
+      console.log('Login response:', response.data);
 
     } catch (error) {
       toast.error(error?.response?.data?.message)

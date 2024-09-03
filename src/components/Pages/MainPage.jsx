@@ -28,7 +28,7 @@ const Home = () => {
           url : URL,
           withCredentials : true
         })
-
+     
         dispatch(setUser(response.data.data))
 
         if(response.data.data.logout){
