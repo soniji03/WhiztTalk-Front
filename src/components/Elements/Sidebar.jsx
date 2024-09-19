@@ -95,7 +95,7 @@ const Sidebar = () => {
      
 
   return (
-    <div className='w-full h-full grid grid-cols-[48px,1fr] bg-white'>
+    <div className='w-full h-full grid grid-cols-[48px,1fr] bg-[#FEF0EF]'>
             <div className='bg-[#2C3E50] w-12 h-full rounded-tr-full  rounded-br-lg py-4 text-slate-600 flex flex-col justify-between'>
                 <div className='flex flex-col gap-7'>
                  <div> <NavLink className={({isActive})=>`w-12 h-12  flex justify-center items-center cursor-pointer hover:bg-slate-200 rounded `} title='chat'>
@@ -113,7 +113,7 @@ const Sidebar = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-col items-center'>
+                <div className='flex flex-col items-center gap-7'>
                     <button className='mx-auto' title={user?.name} onClick={()=>setEditUserOpen(true)}>
                         <Avatar
                             width={40}
@@ -132,11 +132,11 @@ const Sidebar = () => {
             </div>
 
             <div className='w-full'>
-                <div className='h-16  flex items-center'>
+                <div className='h-16 flex items-center   '>
                     
                     
                 <h2 className="text-xl font-bold p-4 text-slate-800">
-        <span className="block lg:hidden"> 
+        <span className="block  lg:hidden"> 
             <img src="/logo8.png" alt="Logo" className="h-auto max-w-[100px] inline" />
         </span>
         <span className="hidden   lg:block text-[#229CD9]"> 

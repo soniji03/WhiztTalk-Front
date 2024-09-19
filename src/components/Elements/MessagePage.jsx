@@ -203,7 +203,7 @@ const MessagePage = ({ initialUser }) => {
           {allMessages.map((msg, index) => (
             <div
               key={msg._id || index}
-              className={`relative group right-[0.8rem] p-1 py-1 rounded w-fit max-w-[280px] md:max-w-sm lg:max-w-md ${
+              className={`relative group left-[0.6rem] right-[0.8rem] p-1 py-1 rounded w-fit max-w-[280px] md:max-w-sm lg:max-w-md ${
                 user._id === msg?.msgByUserId ? "ml-auto bg-teal-100" : "bg-white"
               }`}
             >
