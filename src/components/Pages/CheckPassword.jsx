@@ -58,8 +58,7 @@ function CheckPassword() {
           userId: location?.state?._id,
           password: data.password
         },
-        withCredentials: true,
-      
+        XMLHttpRequestwithCredentials: true,
       })
 
       toast.success(response.data.message)
