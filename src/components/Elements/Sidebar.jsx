@@ -96,11 +96,11 @@ const Sidebar = () => {
 
   return (
     <div className='w-full h-full grid grid-cols-[48px,1fr] bg-[#FEF0EF]'>
-            <div className='bg-[#2C3E50] w-12 h-full rounded-tr-full  rounded-br-lg py-4 text-slate-600 flex flex-col justify-between'>
+            <div className='bg-[#fcb4b4] w-12 h-full rounded-tr-full  rounded-br-lg py-4 text-slate-600 flex flex-col justify-between'>
                 <div className='flex flex-col gap-7'>
-                 <div> <NavLink className={({isActive})=>`w-12 h-12  flex justify-center items-center cursor-pointer hover:bg-slate-200 rounded `} title='chat'>
-                        {/* <i class="fa-duotone fa-solid fa-house-user"></i> */}
-                    <svg xmlns="http://www.w3.org/2000/svg" className='h-12 w-7 text-[#FD527D]'   fill="currentColor" viewBox="0 0 576 512">
+                 <div> <NavLink className={({isActive})=>`w-12 h-12  flex justify-center items-center cursor-pointer hover:bg-[#f9bebee1] rounded-full `} title='chat'>
+                        {/* <i class="fa-duotone fa-solid fa-house-user"></i>       [#2C3E50]  */}
+                    <svg xmlns="http://www.w3.org/2000/svg" className='h-12 w-7 text-[#66a6ff]'   fill="currentColor" viewBox="0 0 576 512">
                     <path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c.2 35.5-28.5 64.3-64 64.3l-320.4
                      0c-35.3 0-64-28.7-64-64l0-160.4-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8
                       22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24zM352 224a64 64 0 1 0 -128 0 64 64 0 1 0 128
@@ -108,13 +108,13 @@ const Sidebar = () => {
                        16-16c0-44.2-35.8-80-80-80l-64 0z"/></svg>
                     </NavLink></div>  
 
-                    <div title='add friend' onClick={()=>setOpenSearchUser(true)} className='text-[#ffce3c] w-[3rem] h-12 flex justify-center items-center cursor-pointer hover:bg-slate-200 rounded' >
+                    <div title='add friend' onClick={()=>setOpenSearchUser(true)} className='text-[#16a085] w-[3rem] h-12 flex justify-center items-center cursor-pointer hover:bg-[#f9bebee1] rounded-full' >
                         <FaUserPlus size={25}/>
                     </div>
                 </div>
 
-                <div className='flex flex-col items-center gap-7'>
-                    <button className='mx-auto' title={user?.name} onClick={()=>setEditUserOpen(true)}>
+                <div className='flex flex-col items-center gap-7 '>
+                    <button className='mx-auto hover:bg-[#f9bebee1] rounded-full' title={user?.name} onClick={()=>setEditUserOpen(true)}>
                         <Avatar
                             width={40}
                             height={40}
@@ -123,7 +123,7 @@ const Sidebar = () => {
                             userId={user?._id}
                         />
                     </button>
-                    <button title='logout' className='w-12 h-12 flex justify-center items-center cursor-pointer hover:bg-slate-200 rounded' onClick={handleLogout}>
+                    <button title='logout' className='w-12 h-12 flex justify-center items-center cursor-pointer hover:bg-[#f9bebee1] rounded-full' onClick={handleLogout}>
                         <span className='-ml-2 text-[#3D579F]'>
                             <BiLogOut size={20}/>
                         </span>
@@ -132,7 +132,7 @@ const Sidebar = () => {
             </div>
 
             <div className='w-full'>
-                <div className='h-16 flex items-center   '>
+                <div className='h-16 flex items-center text-center bg-[#f9bebee1] rounded-bl-full '>
                     
                     
                 <h2 className="text-xl font-bold p-4 text-slate-800">
@@ -144,7 +144,7 @@ const Sidebar = () => {
         </span>
     </h2>
                 </div>
-                <div className='bg-slate-200 p-[0.5px]'></div>
+                {/* <div className='bg-[#b1ccf1fd]  p-[0.5px]'></div> */}
 
                 <div className='h-[calc(100vh-65px)] overflow-x-hidden overflow-y-auto scrollbar'>
             {allUser.length === 0 && (
@@ -159,7 +159,7 @@ const Sidebar = () => {
             {allUser.map((conv, index) => (
                         <div 
                             key={conv?._id} 
-                            className='relative flex items-center gap-2 py-3 px-2 border border-transparent hover:border-primary rounded hover:bg-slate-100 cursor-pointer group'
+                            className='relative mt-4 flex items-center gap-2 py-3 px-2 border border-transparent hover:border-[#66a6ff] hover:border-1 rounded hover:bg-[#fc9b9227] cursor-pointer group'
                         >
                             <NavLink 
                                 to={"/" + conv?.userDetails?._id} 
